@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>[Protected] admin - MDIG Group Guide</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MDIG Group Guide</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">[Protected] Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">hpc <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../hpc/resources/" class="dropdown-item">resources</a>
+</li>
+                                    
+<li>
+    <a href="../../hpc/archer2/" class="dropdown-item">archer 2</a>
+</li>
+                                    
+<li>
+    <a href="../../hpc/myriad/" class="dropdown-item">myriad</a>
+</li>
+                                    
+<li>
+    <a href="../../hpc/server-setup/" class="dropdown-item">group server</a>
+</li>
+                                    
+<li>
+    <a href="../../hpc/tips/" class="dropdown-item">pro tips</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../python/python-setup/" class="dropdown-item">setup computer</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">[Protected] admin</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../python/python-setup/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#admin" class="nav-link">Admin</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#register-visitors" class="nav-link">Register visitors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vpn" class="nav-link">VPN</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hr" class="nav-link">HR</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div id="mkdocs-encrypted-content" style="display:none">OCcKitc5NbLAgGjAdBJsTQ==;DqwAC68JE9CU4nXj70xVufvZVgXxu5CF+5gAhExrV+vgFd1bTrsMTMggfKojJQl94AezvnVI1Zt7SvAx1wbaG04GvA1rrqVPodXI2+9jaOd0hwMuipWCGKr0MqkQo7FhD3YCJTnpbDFtcspZQLCcJOsmJ1RSRh6WLMuJSnmtgnvzSiHctD6zCDb5gNduDJIhek0TGVaWkv7PeClPPRH4y1Ee+GBOa7EzxMwoj4C+EXDQ5GoeTBzd2sDXzQkM8hjWW809F8tUu+95g3rOzGA2goQuH4NrQ+DBaI5pI3urq9VzXQhCID9THshMMzmyXhQgoiPchENTzi3Txm062h88KZZrrEO/jRuH60pK7Bu1u2F0SHET3FwN3KJ4hVqidSpyHRf7eE5pk381II8cSyI6zcInvyT0BF4pAjeSYpv/rEJMiA0U6yQtA0l1iCWeqbCuz7FEszVeRPKGTDDBAvyYf0o7SpwhRhsAU5K54Zt2dKgwIwgxjS0xuPrNF1m/KmlnMXBkX80vt7opf/1WD0LZ2gRh2kN7FISvl6c79PpAw8cLsB0/2hxL3RYQIOuJiG+TsTbMPtivTxpe+3Hsv3PGrU+q8i/bJxXelPPrcWLtDZHwhkIaLTZOE66iMmqCeaieUm3hUI+kYKFgy0iQ3Mud/xxRJuJBuVQ3QlfI/5MjudQh7DPBKynAM6fOPmDWirsMlzHuiBhqkKXCca5aLqrL35f1qi+N+7WQ7s748HNA72kDlItcVCcnjdCutXgV0zDPMgS7q3dG6ClZdGnDMhYTNRkUbTK9H6tFXJE5v/+L7ehtC4bZmqP2SDQpIqUBnfMNO+PEjUMTlhfSKAthFQNM6y7rXTYrg0+UXw2h+cWKJfp/IXw4TeEHX6Os3LSNOmhDJkiQhc6kJz5R1E5k4+uDkH9x9B4y2Gku3LE7GcmYilkIlD8IbLMNWfyHhOLo6x5y42x6StT8F0BanIbF0t+rMCbAhzvxQSRRKRN0sc4OVAhk6Cv+u4tMMDPUCjL60vm+A3Dh9Qg0/6L4RsbiakWogBcSEdTDUi0TjUd30tqzkNTwLspxpksB9ExOoxP/Ey8JuLCS8G429+165LzUAMilNGPpuOKwUXAimqNbulwoIxS1CT1+/zdPpfSaWV9jMqDgzM/2pUHE4rUxMyj/EG6kTdRbFVhPlkkYhPBCmAed5EWTuVLoy4hlMkhn2GYSgskZF/29F36qq/sRaJMDXswhWDFj9bi+hWK188BuKeWX1lUZeZnXKng3C/97fh9DsmLt2ALEomzUg2W0Xfn6e78XcoOi9JkxrmcEcRHBxW7ZWnaWP1afiNDKE/sikTEXxyXoQdiWZSi2T2R0ckdczMeBVUVcYLqKkBt80dZps95MyKH9l0VPue7vvo6fxaQt3j9A30O3wUVCnj+ZXKanPsJrbQ==</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Password" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "admin/admin/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["IsiQnPpSlqTx9wSsUSz08w==;Ozqwj2CaIoUXIHbRrOmI21W5w0OO5Mxn7iT0cGesr4qr6mj9H2dBk3Xg6Ie4rFj8mugGMm5ufrNdwCaLst38TfZU6I0qwvKi+Ai7bkdYvSGs/hVI+CEJSBz+/Ze/EIo+;aAzwcqGVrXBj8JapRkLXMQ=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
