@@ -237,9 +237,7 @@ function decryptor_reaction(key_or_keys, password_input, fallback_used=false) {
         // any post processing on the decrypted content should be done here
         
         
-        decrypted_element.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightElement(block);
-        });
+        
         
         if (window.location.hash) { //jump to anchor if hash given after decryption
             window.location.href = window.location.hash;

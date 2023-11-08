@@ -1,127 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="None">
+    
+    
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>MDIG Group Guide</title>
+    <link href="./css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="./css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap-3.3.7.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    
+      <script src="./js/elasticlunr.min.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '.';
+      var is_top_frame = (window === window.parent);
         
+        var pageToc = [
+          {title: "Welcome to MDIG Guide", url: "#_top", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="./js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+<nav class="navbar wm-page-top-frame">
+  <div class="container-fluid wm-top-container">
+    
+    <div class="wm-top-tool pull-right wm-vcenter">
+      <form class="dropdown wm-vcentered" id="wm-search-form" action="./search.html">
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>MDIG Group Guide</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <button id="wm-search-show" class="btn btn-sm btn-default" type="submit"
+          ><i class="fa fa-search" aria-hidden="true"></i></button>
 
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">MDIG Group Guide</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">[Protected] Home</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">hpc <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="hpc/resources/" class="dropdown-item">resources</a>
-</li>
-                                    
-<li>
-    <a href="hpc/archer2/" class="dropdown-item">archer 2</a>
-</li>
-                                    
-<li>
-    <a href="hpc/myriad/" class="dropdown-item">myriad</a>
-</li>
-                                    
-<li>
-    <a href="hpc/server-setup/" class="dropdown-item">group server</a>
-</li>
-                                    
-<li>
-    <a href="hpc/tips/" class="dropdown-item">pro tips</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="python/python-setup/" class="dropdown-item">setup computer</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="admin/admin/" class="dropdown-item">admin</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="hpc/resources/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="input-group input-group-sm wm-top-search">
+          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search" autocomplete="off">
+          <span class="input-group-btn" role="search">
+            
+            <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+            <ul id="mkdocs-search-results" class="dropdown-menu dropdown-menu-right"></ul>
+            <button id="wm-search-go" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </span>
         </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
+      </form>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#welcome-to-mdig-guide" class="nav-link">Welcome to MDIG Guide</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-        </ul>
+    <div class="wm-top-tool wm-vcenter pull-right wm-small-left">
+      <button id="wm-toc-button" type="button" class="btn btn-sm btn-default wm-vcentered"><i class="fa fa-th-list" aria-hidden="true"></i></button>
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
 
-<div id="mkdocs-encrypted-content" style="display:none">hYWdiptrvU/gwC4Xp3YJDQ==;w2ccMFyCbHJOl3dxDOqNHwvU2rjpozI6U8HbWd2q8AQYfGaEZPpY0BAHOHBspZq6B4FpyUqWtFNfpHTMCO40uwlMvQIRvlt4dt5986GoyDZXK77O7CSuwFUOoCaT7h7FVKe9MCFmjTtR2oz9D5XRWcdAXj+wHAWfPWkf8r5tRyTY506BUcy4zgJln2vBdhCTjfcNw157P4D770tKvB8ev72q1DViv/Wczjs/X+pxeazIGJdFXO0+eIWlSO/kJBC67lP16N4P3Ko+NOgRN2XvL7mUKRq5ZUkVU43MmoRD1pPiZyMZhmLlrTWKC4BCfSrc8WTPIFqibgs5MNjVZxW0GsA8ouAf9QDYv4Vp/FI4EU6s1ks9WB9Uc4Y1qPPkwS+M9R30xoFB+zDiQ+Hk4r1jIE87XF7mexZHEKXMpWrJpqJhNfGEks8iXkaei03d9BpzJWJnMzj7Y/sHWd+mHJ7Tf9vUJYwO58iIJGnJfNWMsmf6BkqZSdqNquYoP2Z+KVDgn0/deexQSCvVZjErma5QtGKe0CmcRWgJ3T9E+e8/4NdcodZHEq8BDGDBxTnkiZvjqCUEzd8tSBSNOSRQwxqUf+/v3Rt2IboONFjAxRzp9N8=</div>
+    
+    
+
+    
+    <a href="" class="wm-top-brand wm-top-link wm-vcenter">
+      
+      <div class="wm-top-title">
+        MDIG Group Guide<br>
+        
+      </div>
+    </a>
+  </div>
+</nav>
+
+  <div id="main-content" class="wm-page-top-frame">
+    
+<nav class="wm-toc-pane">
+  
+  <ul class="wm-toctree">
+        <li class="wm-toc-li wm-toc-lev1 "><a href="" class="wm-article-link wm-toc-text">[Protected] Home</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">hpc</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="hpc/resources/" class="wm-article-link wm-toc-text">resources</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="hpc/archer2/" class="wm-article-link wm-toc-text">archer 2</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="hpc/myriad/" class="wm-article-link wm-toc-text">myriad</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="hpc/server-setup/" class="wm-article-link wm-toc-text">group server</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="hpc/tips/" class="wm-article-link wm-toc-text">pro tips</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">python</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="python/python-setup/" class="wm-article-link wm-toc-text">setup computer</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">learning-resources</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="learning-resources/machine-learning/" class="wm-article-link wm-toc-text">machine learning</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="learning-resources/atomistic-modelling/" class="wm-article-link wm-toc-text">atomistic modelling</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">tips</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="tips/tips/" class="wm-article-link wm-toc-text">tips</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">admin</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="admin/admin/" class="wm-article-link wm-toc-text">admin</a>
+</li>
+  </ul>
+</li>
+
+  </ul>
+</nav>
+
+    <div class="wm-content-pane">
+      <iframe class="wm-article" name="article"></iframe>
+    </div>
+  </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="hpc/resources/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="hpc/resources/" class="btn btn-xs btn-link">
+        resources
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <div id="mkdocs-encrypted-content" style="display:none">pJICVqx/6Ur5/RzWsCowmQ==;7iEjiI30tYHkEVuskQDLRZlhISMYQnRR0h1x9GSVt3ZlxM/bnzwAMshx1hmg641YbWW3GwWyBnEObouZhyFnJYK8AVOvN+cM+qMbnC+l9Euh+k3tQpszU5c49NRn/KMozB2qN14SLD+MdvDJpvkOvKOviSqX3gxp3vahrwSFt7906YBotEhlKJd1TvG6PuQ9xgmgeKlEvL2rm32aNLLiYfTnkWWeHgUlF5EF/b0OFvC/rYu9SdTDRx5yuYqkQ6RrCtHzGniRnu6+p9oAuPEenys9GCNbFH9YHblF68Q6PTAmz50Qgp5CoZ94XU4rFS58RKDg7H/vc7XZ23XsyKsiTL3pVsh2/OBJaqvRNGOFVpY5ZgWx2ZSY525ACfh/8VzplvcEC3v9X8YH1AEi7lyv9AMkD6NjsfpJk7ofWGXc2mReVrDRL6Rse8d5qKCw9fC9c4LCCtuUHVUSd9slS6FIsGBa8LwIQlzEshYhghKKiVrzFWliT+wX3soi1/0PnD+3m1F8IAM+neO0gSQMl+3df4ufU6sfcTxqnEp/b4BFIO7g8e6kSrV2fatlgpxVnQpmQjWTH3yCKQNuSe3DVOigTpCCEpER4F25a1PVoE16Q6U=</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form">
         <h1>This content is protected with AES encryption. </h1>
@@ -136,7 +197,7 @@
 var encryptcontent_id = "encryptcontent_1";
 var encryptcontent_path = "";
 var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["IsiQnPpSlqTx9wSsUSz08w==;Ozqwj2CaIoUXIHbRrOmI21W5w0OO5Mxn7iT0cGesr4qr6mj9H2dBk3Xg6Ie4rFj8mugGMm5ufrNdwCaLst38TfZU6I0qwvKi+Ai7bkdYvSGs/hVI+CEJSBz+/Ze/EIo+;aAzwcqGVrXBj8JapRkLXMQ=="];
+var encryptcontent_keystore = ["OKVn6LLkyKDaB4dY7SfrXA==;R1STPuGje7ApGCcYmBG7qi1chxTNfI1plbsZRZcPGUVnbdK9ObhadzuLwJS97GAXoXIbMwqBMgXqQ/Egf1sn4nZucuj8qRtbO1s61daKV3nOJuY+rozY4jbyB2UOWzkl;aAzwcqGVrXBj8JapRkLXMQ=="];
 var encryptcontent_obfuscate = 0;
 
 </script>
@@ -148,88 +209,40 @@ var encryptcontent_obfuscate = 0;
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-<script type="text/javascript" src="./assets/javascripts/decrypt-contents.js" defer></script></div>
-            </div>
-        </div>
+<script type="text/javascript" src="./assets/javascripts/decrypt-contents.js" defer></script>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
+  <br>
+    
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="hpc/resources/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="hpc/resources/" class="btn btn-xs btn-link">
+        resources
+      </a>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+    
+  </div>
+
+    <br>
 </div>
 
-    </body>
-</html>
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
+</body>
+</html>
 <!--
 MkDocs version : 1.5.3
-Build Date UTC : 2023-11-06 14:05:37.424174+00:00
+Build Date UTC : 2023-11-08 09:59:20.634494+00:00
 -->

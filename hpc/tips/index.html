@@ -1,139 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>[Protected] pro tips - MDIG Group Guide</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
         
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>[Protected] pro tips - MDIG Group Guide</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        var pageToc = [
+          {title: "Tips", url: "#_top", children: [
+              {title: "Setting up an ssh configuration", url: "#setting-up-an-ssh-configuration" },
+              {title: "Adding ssh keys to github", url: "#adding-ssh-keys-to-github" },
+              {title: "Set up alignn on Andrena", url: "#set-up-alignn-on-andrena" },
+          ]},
+        ];
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">MDIG Group Guide</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../.." class="nav-link">[Protected] Home</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">hpc <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../resources/" class="dropdown-item">[Protected] resources</a>
-</li>
-                                    
-<li>
-    <a href="../archer2/" class="dropdown-item">[Protected] archer 2</a>
-</li>
-                                    
-<li>
-    <a href="../myriad/" class="dropdown-item">[Protected] myriad</a>
-</li>
-                                    
-<li>
-    <a href="../server-setup/" class="dropdown-item">[Protected] group server</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active">[Protected] pro tips</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../python/python-setup/" class="dropdown-item">setup computer</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../admin/admin/" class="dropdown-item">[Protected] admin</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../server-setup/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../../python/python-setup/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#tips" class="nav-link">Tips</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#setting-up-an-ssh-configuration" class="nav-link">Setting up an ssh configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#adding-ssh-keys-to-github" class="nav-link">Adding ssh keys to github</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#set-up-alignn-on-andrena" class="nav-link">Set up alignn on Andrena</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    
+      
+    
 
-<div id="mkdocs-encrypted-content" style="display:none">xyQn/r0Dz0P8wBCDaTSwkw==;ty35tZ+r03eUwqz3qQ64jzlmJ1LJ4Fs7gGSszbqoeZIpWPsisRtNuhQrKyJw+nNPFcfj5wHKsvnxLfypSOnrd2bqFMl6CCFeTxa4iolNSzr/rmBrG/oyk6JQGPkO1LbfV1gt8hZmKIjDCNr0ygjloaFfqu6k8CQq+qWfuvhmBC30lRWrNZCMMsVaIWxDaEh+rvdCjJEaCJyCPauvHwwlXILiLUQODr3puSqXmLXeMXnPWIvh5aQILAA2Gt8JSzBE9y16l3ToqtsHCNofm1Hiu26GCezbhvzdGFYDQAsXbShvOnZehp3VoWPgSzYGh4RKxKZY67xSm+1Hv6PNke7Qbe68WsQOPhqD1HTTWH0B0D+atg1XgjNe5EHAzU2QKfMyB5iRJeY0Fc2+M7QIhcD6DBnaw77SxtdYw3DbNpqD5J4Z2BKe9Y3h+dAHCxIaBv3DnYJLMWgtBWqqtkte6GF33MvL6TcFyMuS64ictpw5gP9dOHkkcStkdQ82vYHTEFVOEgRyP1pQydow7RcQuAb0eM7xr6IHAIAN6UCDOz3iPqeHmxkg5J9v6QuZ6gqBq9S5MKDcAgYlUh5jb9iiJr3oEpTBmtI5QbxOa3U2USdQn5lRK8WZI1Uwvy9UGOoxTlnLqZr7YuoskszTqmP83kyQTbyZIgFZDovZuiMTgy2f3ElFeIJJBGqo0qjfmADex0Dk0fatFlO9gUk9m/h9FCKIkYCgLxZCX/wuwMX2BxLpNufvy5D691OomwfHVOh/+Ul9S4TPt08w9P7vMGtT6A5ewH7hxohdC2U3BBTqnx5PrjtnZDAM4yHi0TsG7n+4syKGriRWX++dQeaSzoXa5rLnVAOqlDIMjOse1RTlLUiK6DCAVcHy/b6LgumkiP0dowdd3zhUSHBONYMgSdWoVCuqG6rGQqmqzEe1ers8pHMJwUZLsMRKv6R3gyDBASaRGDyWp+bifhT8qLPWeyqQweAw/bVpX3J2kfnl4vZxDysZ77jIx0MJ+y3qI3VejNM41+55b1D7Q9P31kb+Qm3OxRS8HJ1Qd+DbOOzXOGjkTZkWcmsto7vy1TXb8JNgbtd4RZ5DLK/bjWaSojkAHhvGjvUw1rSOgjsi664trQOrQZyOdY/vKbjTDks/JTiUANYmW7TVopWS0BUdx0I7yzHlQ8wpqHVr4BNIzWjx13n3HTg4l6ECBOXym1mqKksnz3/RsKd5ovq+FprEUbp2SRDAy6FQhZsUuJizrXH2xgV46fIab1GWGN1yEiObRgGL14dxSdaMGSSh9jliFtYbrD0V/iTvoAKylyobN/Q/cZMVimPsIi1tkMvTJVly96KYpJ7QZxGsIbDvZTAEgFmorCb9UXsl+TdP3G2AskGsRfToYWioxxulNbdnsL/GBGFJDK7oNY6hu31g5i+oermpS4Qv5UD98oZnZmMWqQfais4h5R4jOpOzOiE1ouLOXmfRNyJn4ZbW9qY6zQ7BNL4PF5BpMbJwceUHsEI/F8UQDDz3gdjDNcf8x+QO2ncqekJuSOXLvKK0cCm037UKyBz0tY6wHQw6LCpsvelwCW0tsqjpQU5emqCCqCvIkf/T4ZPXJw7kS/j1ntX6L3L2b+Ow9/UnYysk5HryYOyKVpF+4aWVdOp63y+A9DQpl4m+9PWl1nETK1gTPHCd8WgE4gScRDOlnROmYr7CxG0fOY6Y1kl6VN0I/C/NEgtBFZsmtmme+yMJArlJKtO9Oh3dAparoFboAEBkbjVPfdLAneV6vXMAvug1TtrGPtobT7Ido2VG2XAW1IV+n6pW2bpNCCSD6ixCFnimgfZ//IxPshIoYmeF/eNCTHkoVExsRgiOgwQarTQKI/HMEoyB1M9ITX9RlVs3ka5GJjP+QqluiAatdgz1CBNJJJsEltVdUwEoaLZVDpbLE4a4WvwudJ/3pzHsxaLtaO/j8W4B2fplBq6yVrOo3dodVrtZaJfvH1hYgSIUv9crDPnwEfwKRkXo9I/Wz0ouqSUau2R0lVRshVHZzesEQEGTXd1GPF+jpe1W3WzgjFs0Cizc85AhCeROnbHdIj0IkbrmNmXatXWcA7y1YUeeyZ3q6WpBbNRmOEJotL1Mm7z57cCvpDQjCmK/2BXgKofprPzEc9BACsFqEtYd8zv5QEd/zSd5H/+bt4WZeps+3LeoPjXe0+wcOpIpsoW0DqsDOKraqI3CsNjEpaVQyOZ5pIZx4XpPQPMEhFUdS2dDXU+9xr7QVJsLs0uDAYEJFgbcmq3OwxdjpKsqRPro+nEE56pf5plM0FcEaaahZMp6sNQPhbQi4FzUMV86/iWvB3eVDyxd1mdWHft1qH4KSLuA7FkyceVJe1nl/h6D6asalql64CZaGuL3SxedJj78MI9v7uxMhfVoojxCSjE/SNP+EGe24rnRGegEj58HSYETJZOejtt+Tev3IQO50YM2I92QKXMnq6Qa27yLm6mWSJjsU/gMOuM7gb0xEsgVOKjr0PnDfGYkNw9nvaBYoOiHxRTBJ53kyFUYbdxOub+b55DtUQuIxnJEWfXhzYnVP1nwbz1gihgRV4ETNwAra4jDXjB1sKC3BJz/lS3V6hvqWK+G4TpbElUYVbMX6sod3lunACSA2VwT6ENOUPJN/sPMPKvUvsZVHxj9PzJFa6yIL07TqJj4JwF7wtmljD50r0TFHfYlRVJDOYjs4gjei8TP9gMlp8VjdbMH4azV0bjeikwwR0QVVe5HHEeQzmwYaQp/1SxLk8jLpmcEA/X+mnighDxctiJ8erWxmb5mVMElWEcmAKK13hnNipd79Y4ACnmYeNjSOlvVKBjOop5sZQWUu5YGn1ljpAWgqtttXy40OGE7BxkXQUhVInLynWYZ7jJnY0JcDp1D/B8tOsZuE1QLmlxhY7nBjR9xUMsrUmaoySniZ8ZwCePQN0RxlLg71AvOnDtWBWQ6nmxYVUQj4VU2PM38qRTecvoSON4CldrJufg7PExGxtLWx9RURazxyB4Kg23iWu2To7EBtUQ/giSp22a9LceM0GYfOJeRPZQWlA33sYcJydVApSUf7uJ6wQd+0uHpn4pUDSR7GT4bfFG2GJEH2gvQHF0pSHTpcfIA9iWsieCODoq1TwWjhVgIMt/ZuFz9BIqn47BmQyHcQGq1eHKuCEPWy7Kg1LDgcw8FVTB4dNNU4QjIqYCyjjvZ5CsWhFGgMUkB0Yw/cRZOVuU+XflNb8pqy0aLj66u5CdU6k509PT6d/JJm2KBj5fCxtWf7z/6L+xokMx41NUfzBHTHNUNoqvydXQGmN6yQc5OezKmq1PcxErZtdo8+4LcJs97VfXpzAKMWpIEQLe8YDviFWJjustPi4M/+hIIe16AcaYNtcQvZMZMblfJ4EM0aEp1q7HK83+fb59P8lE4iCZCgs08hXUGZ14JFQiU27Dn0CmoAwdADg7ezw6PQVH1iYzaN0Mbx7oehTO36A6Efh4EHjFns+c4zPXeCDZFDp0jKv2uRI/FLd4ScLV6pZAz3stz/WGdGnK5My5ciaZctL8CMyWhFUVmDvbetFu+XL+gMNN+hjegxECYjwwwn9yyD+mUNpLj5l33G3qvPVIHZF50bRK8iRpXXb4NaQVx8io/3CjH2sH8nzWMWiJ8OxQRu5sihcptUaCJ3ZYM+Vw5V5KyknZVpNAICRb4jmwVg8h90sQMp3m3hSO1y+/fvhtwR8PZy1R/6r1U3c8+000bbKnRQ2jI34POkPYxBXyiuPm4B7ehQnpzno+Jd46J3PwYiQcHCEylB2dHecpraZAEfWXkZstiqQHJlj6S1veMJOQ6AU0LybWp/ftUZr+mrGGG4KL5Nw6PPyw7M5F+RpaOcyM1l55DCRYfCkDp0Rh2tDiYoUBxydLkgDPLXi9NE6ST3xDsoeXn1aDmErPIb0UUwEkaAYYYTNVcFQ9Jf0X2hQ4GaaiuNhLBkvcvjODtvs50LItiApG91D32eDmKQ+R+wvsUCC+0Ri0TIXQFeC6LDh5Yt9W330gkFEhzL1cKjZEMFwPf35G9HjFAd9O0Bp24pAEtR+UNpebNm21YqJF70Do93VlXGEH+OLW/anPBDSv+wgNap5aKc1AuUDDDO/Tvr//ub5MIYLP86J7ZRL7VCfV/5gee77hdHEg5PEeBOGAVZMTabSDWDS4VmAer1wA9oCr5lfjxJuX7eVv7KzFhnq/uuEXO4C+/3DF506Qq48YCX6a0lIykX+SsrKZ2Zztqy0IeisW4wMPhFo393pjLFPSAZNRYcZCUcE7Q67CjVTGR7D9Ni40QTs5G0SzN7gTJm2kn+kpI+bKEx3IKh6N5khFeb3oEPMGjrIZTWpQ8zMsZNzcHcOiT6PMHsecqp6NByzYZ0xqrX02WCdXy0FBB60UDucn37vdOhKBUr0TB1J+K5278ZjLiWdZ3pWYjropVqpGRWbXglVIZORl75b9TmAWJM7dOhPVUR+OYQzQYxP9FQYeEdB/ok1Af08JWJ08LYrdTuK2gN8JMKymj1eY32YdIObkDy4woFApz8DIairVll3YZ/BR9DxplFjit6fLAfMTgZJqxS1LCj12NMeNI5HcVqjeghlYqN2sFNq43dYP2PJtAIn1RSvhUetykrJ7Y0PlpLBktlbFh52YyxnMrk1vmYZ/oBAAlA2QWp0qwgkm7ki8cLbb/t0hgb3sFztVFEyaZ/ws5vFWJkr4tZb6u6zs/ae58RpShfZumeNvrGD4fNjnkIkprQHMLhDep1oGHlswE8WpdCOMTYLz+F3iJQ02QFXmUsLi50JRvRNDpmzmecy8Xl200G9hT4u2RM+K27nOtLsNsY94aV8/hV8JOZQM0dSNyzKmpZAaIczc6VBXKLsfBt55UC7itDNCHrMNiDYM480ZEkZz8H+yX0BzgFWJLczcvUnw8YADXY24TcbW6IRefNA0hbwHl2NUirWrKxdNQc3Owdj4nG+Ad6OV03XFX8syTggortHKfre05h0TOtU1U4APxkhmh6hlKSWTuCIvvFDsuTUkyyCQq4tKxCzUdt8NGWifSqv27JH2PzuJIxk+g6Qf+JCEV//uRlnpK8ef69SN/gm0W8o2ewWdBZDRhiicSkaljCxUMHrfJVePx8hyHJMTIdD5BAOHe3YhWnR2+Aiz6iStmfZxg092P6T5mwB7so8JLtxWRXfwrQtORnc2B2Ih7pkGm56ielkwwO/+8yhcvy50yQym2sUlOxoANWe+pD/hzgW+5q3r/T9Rk0pmI2Ut+5caf16ptADLr3gI4wsttw9slLtbPOTw5uVrW3KUdpLYL2mYG0GWpN6WLgaQid/neiKnb+CGF4MhYbgri6KrWk3ZHrqP72x8U7dh6HM6vNcxuyqSQYXOYdsqZB3wSqh+yJMkrLfXqsO08yqwUlsdUTDvQbg==</div>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../python/python-setup/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../python/python-setup/" class="btn btn-xs btn-link">
+        setup computer
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../server-setup/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../server-setup/" class="btn btn-xs btn-link">
+        [Protected] group server
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <div id="mkdocs-encrypted-content" style="display:none">HeXC3mdAUpWzoq4xZtJOIw==;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</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form">
         <h1>This content is protected with AES encryption. </h1>
@@ -148,7 +98,7 @@
 var encryptcontent_id = "encryptcontent_1";
 var encryptcontent_path = "hpc/tips/";
 var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["IsiQnPpSlqTx9wSsUSz08w==;Ozqwj2CaIoUXIHbRrOmI21W5w0OO5Mxn7iT0cGesr4qr6mj9H2dBk3Xg6Ie4rFj8mugGMm5ufrNdwCaLst38TfZU6I0qwvKi+Ai7bkdYvSGs/hVI+CEJSBz+/Ze/EIo+;aAzwcqGVrXBj8JapRkLXMQ=="];
+var encryptcontent_keystore = ["OKVn6LLkyKDaB4dY7SfrXA==;R1STPuGje7ApGCcYmBG7qi1chxTNfI1plbsZRZcPGUVnbdK9ObhadzuLwJS97GAXoXIbMwqBMgXqQ/Egf1sn4nZucuj8qRtbO1s61daKV3nOJuY+rozY4jbyB2UOWzkl;aAzwcqGVrXBj8JapRkLXMQ=="];
 var encryptcontent_obfuscate = 0;
 
 </script>
@@ -160,83 +110,44 @@ var encryptcontent_obfuscate = 0;
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script></div>
-            </div>
-        </div>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/jquery-3.6.0.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+  <br>
+    
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../python/python-setup/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../python/python-setup/" class="btn btn-xs btn-link">
+        setup computer
+      </a>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    <div class="wm-article-nav">
+      <a href="../server-setup/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../server-setup/" class="btn btn-xs btn-link">
+        [Protected] group server
+      </a>
     </div>
+    
+  </div>
+
+    <br>
 </div>
 
-    </body>
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
 </html>

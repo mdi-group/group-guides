@@ -1,135 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>[Protected] archer 2 - MDIG Group Guide</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
         
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>[Protected] archer 2 - MDIG Group Guide</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        var pageToc = [
+          {title: "Archer2", url: "#_top", children: [
+              {title: "Setting up Python", url: "#setting-up-python" },
+              {title: "Setting up ASE", url: "#setting-up-ase" },
+          ]},
+        ];
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">MDIG Group Guide</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../.." class="nav-link">[Protected] Home</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">hpc <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../resources/" class="dropdown-item">resources</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active">[Protected] archer 2</a>
-</li>
-                                    
-<li>
-    <a href="../myriad/" class="dropdown-item">myriad</a>
-</li>
-                                    
-<li>
-    <a href="../server-setup/" class="dropdown-item">group server</a>
-</li>
-                                    
-<li>
-    <a href="../tips/" class="dropdown-item">pro tips</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../python/python-setup/" class="dropdown-item">setup computer</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../admin/admin/" class="dropdown-item">[Protected] admin</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../resources/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../myriad/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#archer2" class="nav-link">Archer2</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#setting-up-python" class="nav-link">Setting up Python</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#setting-up-ase" class="nav-link">Setting up ASE</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    
+      
+    
 
-<div id="mkdocs-encrypted-content" style="display:none">by56LNMU+aGW51ep+1Osbg==;YElvXnyLPK79WeFtaFhqriPLVjEaYw9N3jtlffMbdrx8mLmSwBw0chUhz5iXPGASYv6MMSfBaS8wWdPXHaf5Hqfs22HhyPA1Gz2NPmo6QhRwelEm8PZlB5kClmh9vNVBxad3KMr6BRGEj7mSZqEtG2rGe5b3mbYWY6A+qCpVb0znKZCgkaynGci9i5TZC0j8yoLORV+O8td1fOu4dkHtvVUdMhTqwULFZjE1erCt9NDeq0iIn9srxlVGmvhwsBKl7PF6MUEVALXHUrjify4joiOVOen7ryVUYz7LrOyyHuTZxgniLfSvKXHBvC5Zy9ChWbpfl2mbqhsrEaseNpvCHpSRO4cv88NzQ4DrEzyhvMUpOtBraR86depYXCyDUoCI53rCuZ0qb8Rrmi0QjwDJWJaTgNOQxA86JOZuPR3LAmRGyANgLeW5S+Q/ElhMCug0WMU2r5J2lI8NkuUzA11mNuQGI728MJ4HKrNRVaQaI+dUGVFMR1OqHk0ul8BsevQcGDM33mMKeQjqUIQdbIk2zr1MKtohi2wQ2kh4DN4iYAs+SHx+o8WSWBg9MPJN+2oddDmZkLktTG5N2GwAxfyU6udlpHajd2jQYHoRZTQ8zIp8bREdJ60aAiKFH4fw/Zmaj9eSff2Mt2pqQjyMlBa/Sxcxv+cvlzSnSsJDTdVXVTo/k5efdQcnmDtP1Dwtr36AEjuNFdUQ379ur8u65LBuhr2XlAfcUY7UYNDQa8gWRr0HO3zwHXhg/T9ulEOmzk6IBamqKm9UPZMgijBMk4k3ibpeBuT9eD36EUT0aoUc3v2Q783rQA7dGlgU5MOS9j85OrGbyz6JIndZNKUFxgls8Af+2N1vwlYlJ2O8aNqITVxiPq0GDEt/SI0xhfyVnB7ZtRRQT6l9NCMN/j1HOuCQZIIm0VNS1Y0uE7DKNr9pUJiaYV9rVKRNlrvrIr9+uLIMrLv7Q7vAxWe9l9kFSxOe2ouj5j75Y8HqW/zW/7trv0i37A/j3HF2eNtU0/vfUSMqsiC3egHoKEWXwFXYSuJXRMc14lrU19KM6M6EqF7Xse+YRL+FMoTbUCXmDMh44/V5HHi+fZtKWTsWuMClMwU95NqYmGNNFM2hSerqgFhlZ8cYcB15NBS+yBoJBuIM3/yroSFkffzpYBiQWJKK5BEioxjm5HYO4w1lZxeAl32BPwO9xLLVGZrPsXH3GtzM47NCak1DMbJ/xsAVZLb1QmA20aFaoIhMzJzaVwk+w/oVqd/ceX0hszoKP3YemsWd3ebLCtELiQMnn30zVS7IuabZPIbYLS3EZZ9xl8C23FdrHJ6WOMWTbvCHToW4a7xl/4esMc6NSb199EYPlyjLzyQ13ddd1JC4uqSCwcGpZR8TgzhZgrq4LcjZsMl/RCDUrMTtoto7qDQoRpNJdpayYFa6cqyWTjsPiT8ISRezniq6aj0mpBMPsUU165G7hAat2gIwMPllip+SEX6JxnG6zajm5CauVvpSplNQm7k5VvRu9B8AbJBE1Z2ZCaCoFApcFkyGa3DaGPFG7PAQeHzU8z+nIg==</div>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../myriad/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../myriad/" class="btn btn-xs btn-link">
+        myriad
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../resources/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../resources/" class="btn btn-xs btn-link">
+        resources
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <div id="mkdocs-encrypted-content" style="display:none">q9FEb3PsZWIq34bG+geTIA==;CF4086v+HbHrzVpJYWVr7ijw32Y3lNPkjztWKCk45Pxz06B82entdtvEjb6dk1/5uRFEF1fgcPdI1sQoCdsH3KYI9xF2ds/u+uendjJ2bxWinsNtsEpgGIGvL4ZEp7lAUXxWK14jNiaVO8I4XVFHLDjmefejvx8PMMY0MYtgE3ES0hEOBx5vrPDcmiMHoSCGONcwU/83fh1JOd+GUSc8LXv1qx6RJhqE2Ycp86g6FJ+BFImIbMAV0s3fdEtk7lgScL27VlTbRSnENdiraG2x1lBJVWNmp1HHD111eAE/g8L5ZKlqcFPvTp6PPz7ulseH8gg7Ud2OCmdGNAJYXzf6D95duz+ctm+7gPt+u4FXMhwotaCHSKfDXV5wTkWaojEMt9b3csDAtl4hWMWEz0TnZcaQH6cxWluOzqR5ayB2h2HIKIsy3REAdLuAItOHE1Kgdlrl41xC5OZ6sjJYKmy0DmwPD3uaTSxbNLd71SzELYWhSvRkHgnvHZqZMb9BTmnK8I/5+ciRP78K+gFmNDNTzi3MgRy8Hi2bSu8SuvtvqwnW7eQVKvZ3wBq6csT9xYtpL+lLUxpIPAJmfpGL4rnekKED6hrPFxqI+n7rGERctv2avfrio0ytL5niheDK7pgRjTJxAeOZvBeKau/PcKi8UH8Y3ejoGNfL5TMuGxVn3g+7Ie8REHOJgijqaxmX/tEDxZw2Ts3kL1rE5C0WJUGSpwaDZJXetNo29nunmzRkAjyRzem8osNaXuytz597YLoW5dscaeom1gBUqXIWt0e3tA7O3DT5lEBL3fZ1wqbt1Uq7whnsOxtdwW1Ic/uomv/JITvAkS/hxHxQHxpdT+2JWKdZxK5tv4RzbHR1M5QjCZs5Fk/VF8dpBtjLHUY6jjDgD8o9K84xj5MEfdorxIaeckoNP/fPaGp7qHgyLXJYAaCMr/T3IEsuIbP442w/bNpikThJxR12Wa7UqcKLpekgY5ZfsWpcwERlLDSKJ8g4yTD9crQbkLzkDg9pfqexkkOl/zxLHHVganmmg/7ToRcxl6JozSwlr6OsezLwdHAD5gbcnUBnTfz3T9Oufd+HybcDMCdjZAWCPFLU9WTSd3nHis60r/WlasWWOUS9LyFzmPV8NZgPMYpUEmcQVjcSQctPkyibNVIf4WndeO85/9reIceaukYrL8DhSh1ynYTald5WoLIrVXU4Vf67ExWyeGWveCqp8Z5HqpFVkrCgg31Nt6jGaJaSTbqJfCjT7+BLb58+XWzoC3ijXlZKrRD8eKp/QUjCMxQtaaXnDhdJJzmMhzPSlS7dJFRWUMupFMfjXXc1n1+Jf4TpNXPdRBm+LD3Dpd10ZIJydkiXeFtjso6eGwtIKkINJtFZXEveTe8O8azJAJFVYcTTsgEdMHe7jHr+8a2GkwCkms70cVJLlZOosbMdRYEFZiICW0gl0h6iCUoCLOavPJwk3DprDBayNy2l3CeYq+A4AW7HMpyozI+kt6K9xRX6MDlQh6q6PZw15Dz3clKMeTdRUluaMlIFq3Ws5sZV7RJtW+h94jqv7WKjAw==</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form">
         <h1>This content is protected with AES encryption. </h1>
@@ -144,7 +97,7 @@
 var encryptcontent_id = "encryptcontent_1";
 var encryptcontent_path = "hpc/archer2/";
 var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["IsiQnPpSlqTx9wSsUSz08w==;Ozqwj2CaIoUXIHbRrOmI21W5w0OO5Mxn7iT0cGesr4qr6mj9H2dBk3Xg6Ie4rFj8mugGMm5ufrNdwCaLst38TfZU6I0qwvKi+Ai7bkdYvSGs/hVI+CEJSBz+/Ze/EIo+;aAzwcqGVrXBj8JapRkLXMQ=="];
+var encryptcontent_keystore = ["OKVn6LLkyKDaB4dY7SfrXA==;R1STPuGje7ApGCcYmBG7qi1chxTNfI1plbsZRZcPGUVnbdK9ObhadzuLwJS97GAXoXIbMwqBMgXqQ/Egf1sn4nZucuj8qRtbO1s61daKV3nOJuY+rozY4jbyB2UOWzkl;aAzwcqGVrXBj8JapRkLXMQ=="];
 var encryptcontent_obfuscate = 0;
 
 </script>
@@ -156,83 +109,44 @@ var encryptcontent_obfuscate = 0;
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script></div>
-            </div>
-        </div>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/jquery-3.6.0.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+  <br>
+    
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../myriad/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../myriad/" class="btn btn-xs btn-link">
+        myriad
+      </a>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    <div class="wm-article-nav">
+      <a href="../resources/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../resources/" class="btn btn-xs btn-link">
+        resources
+      </a>
     </div>
+    
+  </div>
+
+    <br>
 </div>
 
-    </body>
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
 </html>

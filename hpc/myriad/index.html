@@ -1,139 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>[Protected] myriad - MDIG Group Guide</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
         
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>[Protected] myriad - MDIG Group Guide</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        var pageToc = [
+          {title: "Myriad", url: "#_top", children: [
+              {title: "Setting up miniconda", url: "#setting-up-miniconda" },
+              {title: "Setting up a pytorch-based environment", url: "#setting-up-a-pytorch-based-environment" },
+              {title: "Setting up alignn", url: "#setting-up-alignn" },
+          ]},
+        ];
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">MDIG Group Guide</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../.." class="nav-link">[Protected] Home</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">hpc <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../resources/" class="dropdown-item">resources</a>
-</li>
-                                    
-<li>
-    <a href="../archer2/" class="dropdown-item">[Protected] archer 2</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active">[Protected] myriad</a>
-</li>
-                                    
-<li>
-    <a href="../server-setup/" class="dropdown-item">group server</a>
-</li>
-                                    
-<li>
-    <a href="../tips/" class="dropdown-item">pro tips</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../python/python-setup/" class="dropdown-item">setup computer</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../admin/admin/" class="dropdown-item">[Protected] admin</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../archer2/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../server-setup/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#myriad" class="nav-link">Myriad</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#setting-up-miniconda" class="nav-link">Setting up miniconda</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#setting-up-a-pytorch-based-environment" class="nav-link">Setting up a pytorch-based environment</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#setting-up-alignn" class="nav-link">Setting up alignn</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    
+      
+    
 
-<div id="mkdocs-encrypted-content" style="display:none">gWmfoWzr3VXJyXFlzA+mnw==;zwb3w456Qm3NfRc7XM8vNNqF8ERcSe+Bf43pCQTCfJpFvHjedQPVgBIB3ccRBjKP4Z2iiNYrRDp7z4qsdtlx3yvumqutIhdqMshIOVvcV4fKx89hjtrsMyhOJ6YIfDzIOU7OYVk/ot7gVD/yAo4lllPVSBnh9bLYWQE6WyYPRO4BcyEM8W3stilG7bFuU0xtxl8FkwcI3wUR23bIX/svR8y7XNXwgNgfkIcFuJDPATkRJtyAsx3C1ggK0a4KMOJJ99Ed0OmV3jqu0XUefUqCpjvixg3DgFk4I79Rq3TlWnC6nLR3l7V6GJj2WKh63sOCOImN0Qi2h+alLWj1/wjVpV52fwDizCEaAWWSqnG1KJblLGeapZbleHAge28YMRGAfb4vntO773g9RuG+XKT6/pISwvCr19a+iwgcLlgXYhpaxt23Hyxj6ch2vUPrGQpXFwACEyKbsna/OwP7vt2t/tdVdVo+cqEP/EAiPGOT4VR7LbfxWiVuHEHAm+/XWAHpm8ceuBJYX929uhPkZeb1J0+jsjyMZEoaRCXUIo7GkUupu5JLmyQMVvwn4p3G1OBRq+p5vYEiRHreFCyZ7ank51/MQXAFGCVJ7tXTad/T++pCldqlbGaQROHEFeyAfOfVHuOvxYo+TIL1OQ+0RHm3143oAGHGCnYqgPUiXZd8LIbYM1XqHd59IWlno0/2rHE+GY4q7u7U09HN2WY09AybW4T8ewbSIHUx7hyr+V0d3UkTiT0DpwqYoWoUHPChp6XR6wW/NPEeKZwn3eC37kYGkCIhw2WssSev13gwFOTGrvdiMEXrE+uuvIqbc5V7kwykex6fZmRNs3FuXedHVarXt2wFvvnfFmgVu0ZirRLeQz/S7YxVE8X8lhTFp8UV9LS8T2oUXpIhOXw6/J5B2XiUheOxwArlU0ImjB+070G0oEDKqXRC8UobUJUZjKAVdyJH6cd/JzqBw6PAkKujHCV2dan4S+TfE3WWzAwygrb7BPwVVlf6yT3d9+cK6P71eGF3qLwE3S0rD0R2oZEMIxp9NKixuEaAzlbH7FtVN2boehj+5rJXqDSEikVH35V61NvaqqAPGkZUmj2pZVOtwFAJI48eAMML/rzRWEeNDhulTQ/OEILzBGlCAKJ0UdH3c8zDocJVM0mEyADtFvC8/xU6iZW/iBZifVS1KrK7Z3pHGFmCVBPLm/t0CQNT50sNJVznTQmZtDvdgH7BoP+Ci2JGBWIA7V47hlnVzRIMhpBvgf/mbJD+LF12OaMcIV3voplZsDQS3tdUQMnhrUos0QrIZjv/5VoGvFsuQuu8jQV/90Jm5R2FpG75jYMpHK9j8bsCoUxbDrrdjaLBQcDmirGbiRYGKuUnaZsDkinPu7Y0+VqCHFczKWh8DVwKB6px4nnMspI61TGTDwQhr40OmO9bSUvyK+ppmo8rLC+2yAb2R1JmVMiCeZZ92jt4onAY0UFgPnNZtmSsG4cGxRU+cqJJWa4jy1JxLzTADx9zy64CGWud/nB1o3hwwPoLH1cA5fAk+3Vxs93C+bIkpK1I96aFo2XYhQItt4GMXntbJV7IJuGYenJPe/vszmcnU4kFmCwE2EyFyKjK8vUjflxj8w68E+tnEgda7xnHChvx989Pfywi8So2CgWdx3d7vWLL9VGm1DFFM/5g4rmDX/f7D6qU+fK0quPowC4XZ1cVKNpxUyxD/XzNjri62fSIUO5aa9NnUn2RFNBf5bdg6OciUJd+YpYyo90ZaurwzNPZC7yxm9xZKQX+QehFazxLdwnWGSKmm8XttxsW5CeSCKZLnqbgJzElKywy0t5R6guERGGi3vT1iDcW9QuaMM/dZbFmrNkKZMpp6YhrltX/+3ePKkev4zfsPSiRYUWrWBw8gXUJD3C/AE1VYHGiJXhP61/2IYytINdsK4KBCiPCCP9+Psv2MzBcY8CetZVqO2gCQ0WrF9H0Pa6vAX7J19UeHFbsq1rD1FRPMl26+oJfLutS8Fa0ETu82yk7VGJaMEHxk78FLUomTGQo2Q60fLDsjR4hD5+jvPEINVcvmiwZLmVuvdESBFB56+qXceaAdBZ/DHPNtHNhyLyVQG9Tpiyfd31ixvyUEUNF4TGP1ImOf0l4NG3srNn3pQv1hKsnGtomU34hYNRkSos/XmkM26mYAoYXeNYDQ3JLVoDk2oz/BTaGD9R2EkjsafJy8akBUJqv7vl556jrdGJ6/MUC+PSbWLWYPrJSR1mp9gEHjhW4I6tKlwDnXluUtNpBZ/u9DcT0pnUn7dbIOmkhr6NAd7X5cVg+OvQWMaDPIpaUu3n10h5rcPCmHuKHoE36SlhCB8u0Xv3ljXPhrKZE8+9BvXpwW+cD6E3z5RivvOuGxXApzX4YVmGTNCIn0cGley0h7LujGtRFIhkBLur1x7zbwFMGfVXztcwvFjERsMFIydFy1c1E5+h9CBfiW175fLwKIiBIE6CzQKSV8qYnrnkrzeNxykcyBheL8SGruZO0n/bErQ7Z1KbkRpk9+q1BqOR0Abx7PQKGWZgN6mtq4CtCgLJa2G1sZF+bP4lhfMx79NOzV5SYwUXgAw3oABkoBTBgecTVjfIeu6jLnkRF2m2pHgbtTGD69SqywxggtRIu6Mj1ViQpP9Dy5S/QNgTK6RR5Ns0Q/p6MobCwC1KpW7PtdiHjfjoZtvYcGt78ctzFEDcfiVSQR2Cdx43fLjRHyiNc1AkNrtsdDH7Vf+VAC/pxd5Gi8fbZ9uUgFpLGR+ZQ2pTJNF0m7g4m/Nx9/GvoUWA95DTbGi5Bo7wTltbOVvY58ZZ2mU3bYxOVGBdNYl5Arf5p1mni3pztJvQRL5ZlG9r3travU4vGznO2xIg7L+IbrXP3F9M95H7Q+3d0K8p9gkaVb5MZSsmQIVmYuo8gY1P10Ag8MDbF9e339CyZOWYv3n1EM44RKi24uxebw8q32u/bf0ADFUoZlcs+2G3EVyhjSRrwipUzVO3Wx+xDknu2fEPXaGKojRJKIfa5+4h2Xtn7yQrl2WJNtEROHhEMm0aJi+DJiUTok7nenAwfSGvamZNh8S3DV7KoSarTW2BqDmKRJOxKw33jd5wqnpEATd+TdlcLCew9HxIqt8IIRNHgejORZpd9NehXP8X/zaYr5Y2uHaEsB5qzzRnyBdIKfj6uxpx76/F058dxHvbd/vwpxdBp2VMwYas8zVcGIIOtey96gUbdDNb7wU8/NvhKbvw+Dv+6DKibGv/gNSjLrre980CdHyRL8WbFcgWXsuvCCz0V0FafvLkYHQ/9T1R4vIBU/4Lq4odvLrEp7Rq+prBtOJBlR/pc1jaCi49pqGuO4UvT9+XDLCp+4nDu7BKGUD3f5lYqt7SpbDYIundnxEZhRuZlLHBawUPD84/f7FOEAXof3tchGRfIu7XBKZW78jMgSLyUCO+lCxtGCkJtBqsDCrP136hoX2NAg/vTbWa01754h+qo2uoO63tbS6ZdGLW6bO7dHOrWYlsLzApn5IuRsr3ZRyQD2MbqOwVm/56R0srn+JMI8tPko/lbPCHkTxnryKDI+YgUkEd2suqnmwJyR01a3dHsnISoo2l4P51gzW5wsmnBWhp3TFRsVkXWsWZFZzFHa3wMiZVPDsu2IAtYyQ748NFxnZ15S8JQnS4sLboVovMG5EBCOAYR+nc/sZPa+xzhglQMNKTjuTAGjjv7NCBNoYkuFCWXsPS00uKsOO6Q8iNv0TKQdd77eu6+61S9IF1eZwxrDD/gyoyfSqqnfxV1f+5M3gESQFeKGak6fiYdkw4YvGJHRt2QrwMRxJRlD23ME7D86ifx4fhkVXUA5xJC9rF9zSM3kxIJqWitJXA0Q6N2ii+j1aAm3GjCmrxxBh0IyJlXuXSZ9rZOEnjPPLTaTRUn1cUPijjcyHalnQIJWOFKn7HOwj8Uq8prDKxa/oBSHE7hsWkDkaWpXbcaDVGFXg/3/4qdpkg7QgyfmVsq5flUjh94Zw==</div>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../server-setup/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../server-setup/" class="btn btn-xs btn-link">
+        group server
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../archer2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../archer2/" class="btn btn-xs btn-link">
+        [Protected] archer 2
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <div id="mkdocs-encrypted-content" style="display:none">d9qrH7oyg7fjG9nDgdTKsw==;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</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form">
         <h1>This content is protected with AES encryption. </h1>
@@ -148,7 +98,7 @@
 var encryptcontent_id = "encryptcontent_1";
 var encryptcontent_path = "hpc/myriad/";
 var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["IsiQnPpSlqTx9wSsUSz08w==;Ozqwj2CaIoUXIHbRrOmI21W5w0OO5Mxn7iT0cGesr4qr6mj9H2dBk3Xg6Ie4rFj8mugGMm5ufrNdwCaLst38TfZU6I0qwvKi+Ai7bkdYvSGs/hVI+CEJSBz+/Ze/EIo+;aAzwcqGVrXBj8JapRkLXMQ=="];
+var encryptcontent_keystore = ["OKVn6LLkyKDaB4dY7SfrXA==;R1STPuGje7ApGCcYmBG7qi1chxTNfI1plbsZRZcPGUVnbdK9ObhadzuLwJS97GAXoXIbMwqBMgXqQ/Egf1sn4nZucuj8qRtbO1s61daKV3nOJuY+rozY4jbyB2UOWzkl;aAzwcqGVrXBj8JapRkLXMQ=="];
 var encryptcontent_obfuscate = 0;
 
 </script>
@@ -160,83 +110,44 @@ var encryptcontent_obfuscate = 0;
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script></div>
-            </div>
-        </div>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/jquery-3.6.0.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+  <br>
+    
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../server-setup/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../server-setup/" class="btn btn-xs btn-link">
+        group server
+      </a>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+    
+    <div class="wm-article-nav">
+      <a href="../archer2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../archer2/" class="btn btn-xs btn-link">
+        [Protected] archer 2
+      </a>
     </div>
+    
+  </div>
+
+    <br>
 </div>
 
-    </body>
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
 </html>
