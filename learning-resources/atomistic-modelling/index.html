@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,79 +9,214 @@
     
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    
     <title>[Protected] atomistic modelling - MDIG Group Guide</title>
-    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
-    <link href="../../css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/highlight.css">
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
 
-    <script src="../../js/jquery-3.2.1.min.js"></script>
-    <script src="../../js/bootstrap-3.3.7.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
     
-    <base target="_top">
-    <script>
-      var base_url = '../..';
-      var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "atomistic modelling", url: "#_top", children: [
-              {title: "Videos", url: "#videos" },
-              {title: "Tools we use", url: "#tools-we-use" },
-          ]},
-        ];
 
-    </script>
-    <script src="../../js/base.js"></script> 
+     
 </head>
 
 <body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
 
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
 
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
 
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
+            <!-- Main title -->
 
-    
-    
-      
-    
+            
+              <a class="navbar-brand" href="../..">MDIG Group Guide</a>
+            
+        </div>
 
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../../tips/tips/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../../tips/tips/" class="btn btn-xs btn-link">
-        tips
-      </a>
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">[Protected] Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">hpc <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../hpc/resources/">[Protected] resources</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../hpc/archer2/">[Protected] archer 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../hpc/myriad/">[Protected] myriad</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../hpc/server-setup/">[Protected] group server</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../hpc/tips/">[Protected] pro tips</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../python/python-setup/">setup computer</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">learning-resources <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../machine-learning/">machine learning</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">[Protected] atomistic modelling</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">tips <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../tips/tips/">tips</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../admin/admin/">[Protected] admin</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../machine-learning/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../tips/tips/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../machine-learning/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../machine-learning/" class="btn btn-xs btn-link">
-        machine learning
-      </a>
-    </div>
-    
-  </div>
+</div>
 
-    
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#atomistic-modelling">atomistic modelling</a></li>
+            <li class="second-level"><a href="#videos">Videos</a></li>
+                
+            <li class="second-level"><a href="#tools-we-use">Tools we use</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
 
-    <div id="mkdocs-encrypted-content" style="display:none">NRR8q6x/7jR5jWDm1khPKw==;cczXSUKuIINXEZPwQF73jV7YyZqeTdJ9Zux3d5+GlU3rK6XtmtcRzZcI2ZKYvdMhNAxbFHMKcxjef5+NAntgUIPYhA2YE3aYIiZ6hDIeJ0gAkb+0D4odKoaHcmEMvb57kbd0K8oAGIoz3IL68hYdMnw40YHYPj/IW6ru3nlGMlK1YIl1gct3fePujdLRiQqzwYCm9nzD4W0oBdvlP8Ti3wSZIK0M/7v9uDTtD8w0oF1l6PRn0qKD0yw03PEdQRcnH6l8LpdVJwjayqsw5V4IWoIHt12V+lXkhu3BX0gKPR4xSj5aKLfpnUXqJJPY5nMtjgbOMprYV58x9kMw+LhtQ0iwncfQUvTNcYys6ZqqUhM/wRuHinKg/YiALJCLUvqjlakEthqkVSsG5hbWmO/3Zr+tQuorOB7tgAE9jyJcidawHXg5U+v3A8MYAWKCuJWx7Mg3OnI43azT3H36iPKD895+uSn6/FyPSEmr2s/49+esxLtIHKROfj9h7JxMu8Ck0tD+UJfcaCmzMypmRXAmyb3Z+Ir7tTWleRnJ6ypLr8OOeMapT2ZGx8oR1tDzKoP0LtVmbsi8TECy5iYmBgEXFZRRCevBB64s4N1ZkO6vzyg8fRxHZOoERbqn1+U42bZAkKTbtsRdozmQYEsetjjJqasvweTAPVohRXg5YIFpds5EdRLHEFf3RsZ+VVwRK7D9</div>
+<div id="mkdocs-encrypted-content" style="display:none">ZE5ECOo+81uUwLZSfR3Rfg==;gZlJY9SizWfXYGBxVYgX/qOyySC8GwlFgru+dQmd4wKyiXVPKf+k2n2RBkeeLFKtG6jWN5CL3wSsTlJgHo6S9IouDB8W1a7iRHHIA/vMK03K1CS6hpX7oDNTnwTA1JBDCOtfEdk14wdoklaMfgLWPLJgxxZLLJ8Mztn8Ub8P2O4Fl/QzhXZ/Q2zq5CwkILxwq/OIiorGC7OcUzDo81Vu7L1pE71ebC1O/F7B4/i4qMOkz0YJnkoUSidBH7ZvQROHseX3cYCS9bSLM4oXeqHGQlKTJJw+IWmScmnxHIuGv/x5ShPYv5VjG4powqqtDi75sOLBJor550TgVXLOgt3JhzLNv5rw6SXL4fN2Khb5ztK8lPHvXHwizq4Us3MTjl+nu+yrQUAlOvSBlw6FBYGRjCm0bJK78Y4by7zjcLDcuBTifMb4DmVscP62Syb7JfrRGXF6gDFyHwSg/kl+C52eeNSycfeY2kjSAzFnWK4HMPlXudMsBFLnVxfGl/XEAkULOSDe8ETPd4arq122T+DotYpW6m7GMuC93zBfF226GdMYvV1/tQ9N0B6lhmsz/TN3ORMPPBeW5rx/RHKTDQQw6SZaywtgKhduZ9cM8uMWQOaRBIljoih64qQ3QS+0VF5Teu7dhASc09Mudz9bP3quz19v4/vSZaXyCM6wigTYl7RCW4GB6HfNaQPlX/fmXyYp</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form">
         <h1>This content is protected with AES encryption. </h1>
@@ -97,7 +231,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 var encryptcontent_id = "encryptcontent_1";
 var encryptcontent_path = "learning-resources/atomistic-modelling/";
 var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["cqjcHlC2bSma0wgGrSdmow==;I0JKK4SM4QG2FqG0tctuzVXfAg1DLzIFOfcpNnGiZ8oJ/oHz6mMT5ONcle+HphnXRqv3tSvRd/2vUqm9FudcD2A/T8LxFQiYzd2W5abZaoVw+FHa9kT+qZ+qIYRVustE;aAzwcqGVrXBj8JapRkLXMQ=="];
+var encryptcontent_keystore = ["A6GQoDmyFDWEb9z8m3KKew==;ylpzycBzLYnCCMTQWdKG+7l390azaRxIdukXnegAlMFivdGVZaRIqUaoVj88c9iJk5RVUd2on89IEB7MD9spxbmxNMAHIS7QrRL5sTIdw1IWkNbFhz15mi72O2ThZ7qa;aAzwcqGVrXBj8JapRkLXMQ=="];
 var encryptcontent_obfuscate = 0;
 
 </script>
@@ -109,44 +243,105 @@ var encryptcontent_obfuscate = 0;
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
-
-  <br>
-    
-
-    
-    
-      
-    
-
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../../tips/tips/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../../tips/tips/" class="btn btn-xs btn-link">
-        tips
-      </a>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script></div>
+        
+        
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../machine-learning/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../machine-learning/" class="btn btn-xs btn-link">
-        machine learning
-      </a>
-    </div>
-    
-  </div>
 
-    <br>
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
+    </body>
 
-<footer class="container-fluid wm-page-content">
-  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
-</footer>
-
-</body>
 </html>
